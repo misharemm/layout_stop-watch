@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: #000;
+  --center-color: orange;
+  --big-stick-color: green;
+  --small-stick-color: #00f;
+}
+
+.clock {
+  border: 3px dotted var(--border-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  position: relative;
+}
+
+.clock_center {
+  background-color: var(--center-color);
+  z-index: 3;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.clock_bigStick {
+  background: var(--big-stick-color);
+  transform-origin: bottom;
+  z-index: 2;
+  width: 5px;
+  height: 130px;
+  animation-name: clock;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  bottom: 150px;
+}
+
+@keyframes clock {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.clock_smallStick {
+  background: var(--small-stick-color);
+  transform-origin: bottom;
+  z-index: 2;
+  width: 7px;
+  height: 70px;
+  animation-name: clock;
+  animation-duration: 60s;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  position: absolute;
+  bottom: 150px;
+}
+
+/*# sourceMappingURL=index.971c2ea4.css.map */
